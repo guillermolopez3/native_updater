@@ -23,7 +23,7 @@ class UpdateMaterialAlert extends StatelessWidget {
     required this.updateButtonLabel,
     required this.closeButtonLabel,
     required this.ignoreButtonLabel,
-    this.newVersionLabel = 'New version available'
+    this.newVersionLabel = 'New version available',
   });
 
   @override
@@ -47,7 +47,7 @@ class UpdateMaterialAlert extends StatelessWidget {
       child: Text(updateButtonLabel.toUpperCase(),
           style: TextStyle(color: Colors.white)),
       style: flatButtonStyle,
-      onPressed: () => launch(playStoreUrl),
+      onPressed: () => launchUrl(Uri.parse(playStoreUrl)),
     );
 
     return AlertDialog(
